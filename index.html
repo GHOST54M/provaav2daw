@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Dados</title>
+    <style>
+        .tabela, .containeer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px
+        }
+        .formularios{
+            width: 1260px;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            background-color: dimgray;
+        }
+        .formulario > input{
+            margin: 10px 20px 20px 20px;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .formulario > label{
+            font-size: 25px;
+            border-left: 3px solid black;
+            padding-left: 6px;
+            margin-left: 15px;
+        }
+  
+    </style>
+</head>
+<body>
+
+    <section class="tabela">
+    <h2>Lista de Salas</h2>
+    <table>
+        <tr>
+            <th>ID da Sala</th>
+            <th>Quantidade de Candidatos</th>
+            <th>Tipo de prova</th>
+        </tr>
+    </table>
+    </section>
+  <section class="containeer">
+        <section class="formularios">
+
+            <form method="GET" action="salaprova.php" id="formConsulta" class="formulario">
+                <h2>Digite o ID da sala que deseja consultar</h2>
+                <br>
+                <label for="nome">ID:</label>
+                <input type="text" name="idsala" id="idsala" required>
+                <br>
+                <input type="submit" value="consultar">
+            </form>
+            <form id="formConsulta" class="formulario">
+                <h2>Cadastro de candidato</h2>
+                <br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <br>
+                <label for="cpf">CPF:</label>
+                <input type="number" id="cpf" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" required>
+                <br>
+                <label for="saladeprova">Digite o id da sala do candidato:</label>
+                <input type="text" id="saladeprova" required>
+                <br>
+                <button type="button" onclick="inserirDados()">Cadastrar</button>
+            </form>
+            <form id="formConsulta" class="formulario">
+                <h2>Cadastro de fiscal</h2>
+                <br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nomefiscal" required>
+                <br>
+                <label for="cpf">CPF:</label>
+                <input type="number" id="cpffiscal" required>
+                <br>
+                <label for="saladeprova">Digite o id da sala do fiscal:</label>
+                <input type="text" id="saladeprovafiscal" required>
+                <br>
+                <button type="button" onclick="inserirDadosFiscal()">Cadastrar</button>
+            </form>
+            <script src="script2.js"></script>
+</section>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
