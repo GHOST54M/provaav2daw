@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     {
         $quantcandidatos = $montar['quantcandidatos'];
     }
-    echo "$quantcandidatos";
     if($quantcandidatos < 50 )
     {
         $sql = "INSERT INTO candidato (nome, cpf, email, salaprova) VALUES ('$nome', '$cpf', '$email', '$saladeprova')";
